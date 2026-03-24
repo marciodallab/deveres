@@ -1,0 +1,52 @@
+package com.mycompany.dever4;
+
+import java.util.Scanner;
+
+public class Dever4 {
+
+public static void main(String[] args) {
+Scanner sc = new Scanner(System.in);
+double salarioMinimo;
+int qtdKwatt;
+double valorKwatt, conta;
+
+System.out.println("Digite o valor do salário mínimo R$");
+salarioMinimo = sc.nextDouble();
+System.out.println("Digite a quantidade de quilowatt");
+qtdKwatt = sc.nextInt();
+
+valorKwatt = salarioMinimo / 7 / 100;
+conta = qtdKwatt * valorKwatt;
+
+System.out.println("Valor da conta R$ " + conta);
+
+}
+}
+
+package com.mycompany.dever5;
+
+import java.util.Scanner;
+
+public class Dever5 {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        double valorAula, nhoras, descontoINSS, salarioBruto, salarioLiquido, valorDoDesconto;
+        
+        System.out.println("Digite o valor da aula");
+        valorAula = sc.nextDouble();
+        System.out.println("Digite o total de horas trabalhadas");
+        nhoras = sc.nextDouble();
+        System.out.println("Digite o valor do desconto INSS");
+        descontoINSS = sc.nextDouble();
+        
+        salarioBruto = nhoras * valorAula;
+        valorDoDesconto = salarioBruto * descontoINSS / 100;
+        salarioLiquido = salarioBruto - valorDoDesconto;
+        
+        System.out.println("Salario Liquido: R$ " +
+                String.format("%.2f", salarioLiquido));
+
+        
+    }
+}
